@@ -1,0 +1,17 @@
+<div class="row">
+    {{#each model as |video|}}
+      <div class="col s12 m6 l4">
+        <div class="card-panel center-align">
+          <div class="purple-text">
+            <p>{{video.title}}</p>
+          </div>
+          <div class="video-container">
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/{{video.videoLink}}" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="purple-text">
+            With EmberSherpa
+          </div>
+        </div>
+      </div>
+    {{/each}}
+</div>
