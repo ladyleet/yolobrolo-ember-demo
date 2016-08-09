@@ -7,8 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('featured', {path: "/"});
   this.route('about');
   this.route('featured');
+  this.route('videos');
 });
 
 export default Router;
