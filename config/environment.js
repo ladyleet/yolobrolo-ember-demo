@@ -4,6 +4,11 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'yolobrolo-ember-demo',
     environment: environment,
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' 'https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -11,6 +16,13 @@ module.exports = function(environment) {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
+    },
+
+    firebase: {
+      apiKey: "AIzaSyANSawq54sXWME9TauIghFFTdXHdI0T6t4",
+      authDomain: "yolobrolo-ember.firebaseapp.com",
+      databaseURL: "https://yolobrolo-ember.firebaseio.com",
+      storageBucket: ""
     },
 
     APP: {

@@ -7,8 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('featured', {path: '/'});
   this.route('about');
   this.route('featured');
+  this.route('videos');
+  this.route('submit-video');
 });
 
 export default Router;

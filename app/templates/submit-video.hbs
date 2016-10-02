@@ -1,0 +1,20 @@
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s8">
+          {{input id="title" type="text" value=newVideo.title onChange=(action (mut newVideo.title))}}
+          <label for="title">T</label>
+        </div>
+        <div class="input-field col s8">
+          {{input id="people" type="text" value=newVideo.people onChange=(action (mut newVideo.people))}}
+          <label for="people">P</label>
+        </div>
+        <div class="input-field col s8">
+          {{input id="link" type="text" value=newVideo.videoLink onChange=(action (mut newVideo.videoLink))}}
+          <label for="link">L</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light purple" type="submit" onClick={{action 'saveVideo'}}>Submit
+      </button>
+    </form>
+  </div>
